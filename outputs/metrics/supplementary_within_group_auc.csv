@@ -1,0 +1,7 @@
+segmentation,group,value,ci_low,ci_high,n,n_events,confidence
+k-means (results.json),lapsed infrequent low-value,0.6250146266669357,0.5886446549956571,0.6600274738319591,1044,365,Moderate
+k-means (results.json),cooling regular mid-value,0.6238507021433851,0.5960501305406042,0.653821441032236,1495,880,Moderate
+k-means (results.json),recent frequent high-value,0.7503168032440652,0.6985889503374914,0.7983804158774237,699,623,High
+RFM rule (supplementary),RFM group 1 (low),0.6126459347962064,0.579910271207722,0.647934275917174,1100,389,Moderate
+RFM rule (supplementary),RFM group 2 (middle),0.5901961614749874,0.5572879811463517,0.6255838664997787,1071,594,Moderate
+RFM rule (supplementary),RFM group 3 (high),0.7415844042962688,0.7053592159480441,0.7781224435271363,1067,885,High

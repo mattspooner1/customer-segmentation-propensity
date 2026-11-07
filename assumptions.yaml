@@ -1,0 +1,38 @@
+# Assumptions register. Every business number used in any document comes from
+# outputs/metrics/results.json, the data, or this file.
+# Unsourced assumptions appear ONLY inside the clearly labelled "Illustrative scenario"
+# (notebook 04 and docs/BUSINESS_IMPACT.md), never in the README findings.
+
+version: 1.0
+
+context_facts:
+  - id: F1
+    description: Many of the retailer's customers are wholesalers
+    value: qualitative
+    source: https://archive.ics.uci.edu/dataset/502/online+retail+ii
+  - id: F2
+    description: Data covers UK-based online retail transactions from 2009-12-01 to 2011-12-09
+    value: "2009-12-01 to 2011-12-09"
+    source: https://archive.ics.uci.edu/dataset/502/online+retail+ii
+
+illustrative_scenario:
+  - id: A1
+    description: Number of customers the team can contact proactively per quarter
+    value: 500
+    source: unsourced assumption
+  - id: A2
+    description: Cost per proactive contact (staff time and materials), GBP
+    value: 2.00
+    source: unsourced assumption
+  - id: A3
+    description: Gross margin rate on merchandise value
+    value: 0.35
+    source: unsourced assumption
+  - id: A4
+    description: Incremental effect of contacting a customer on their chance of ordering
+    value: null
+    source: NOT ESTIMABLE from this data (no contact or treatment records)
+    note: >-
+      The scenario reports break-even arithmetic and what contacted customers did historically,
+      never incremental revenue. Model scores are used as rankings only (calibration check P2
+      failed), so no predicted probabilities or expected buyer counts are shown.

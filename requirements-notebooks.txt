@@ -1,0 +1,6 @@
+-r requirements-dev.txt
+# Only for executing notebooks locally; not used by CI.
+nbformat==5.10.4
+nbclient==0.10.2
+nbconvert==7.17.1
+ipykernel==6.30.1

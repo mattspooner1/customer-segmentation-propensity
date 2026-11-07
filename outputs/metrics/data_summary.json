@@ -1,0 +1,106 @@
+{
+  "cleaning_log": [
+    {
+      "status": "missing_customer_id",
+      "lines": 243007,
+      "abs_value": 3820119.739998304,
+      "share_of_lines": 0.22766872999172733,
+      "share_of_value": 0.16859405656754062
+    },
+    {
+      "status": "non_product_code",
+      "lines": 3736,
+      "abs_value": 684448.258000001,
+      "share_of_lines": 0.0035001887815951527,
+      "share_of_value": 0.030206882553597134
+    },
+    {
+      "status": "price_le_zero",
+      "lines": 61,
+      "abs_value": 0.0,
+      "share_of_lines": 5.7149763296923e-05,
+      "share_of_value": 0.0
+    },
+    {
+      "status": "exact_duplicate",
+      "lines": 26402,
+      "abs_value": 375581.5600000237,
+      "share_of_lines": 0.0247355418125469,
+      "share_of_value": 0.016575610997051432
+    },
+    {
+      "status": "reversed_giant_line",
+      "lines": 10,
+      "abs_value": 495098.39999999985,
+      "share_of_lines": 9.368813655233278e-06,
+      "share_of_value": 0.021850269975080907
+    },
+    {
+      "status": "cancellation",
+      "lines": 17581,
+      "abs_value": 462404.23000002565,
+      "share_of_lines": 0.016471311287265627,
+      "share_of_value": 0.02040737207617712
+    },
+    {
+      "status": "purchase",
+      "lines": 776574,
+      "abs_value": 16821033.519987576,
+      "share_of_lines": 0.7275577095499128,
+      "share_of_value": 0.7423658078305527
+    }
+  ],
+  "flag_counts": {
+    "cancellation": 19494,
+    "missing_customer_id": 243007,
+    "non_product_code": 5925,
+    "price_le_zero": 6207,
+    "neg_qty_non_cancellation": 3457,
+    "exact_duplicate": 34335
+  },
+  "snapshots": [
+    {
+      "snapshot": "seasonal_2010",
+      "cutoff": "2010-09-11",
+      "customers": 3243,
+      "events": 1898,
+      "non_events": 1345,
+      "event_rate": 0.5852605612087574,
+      "events_per_fold": 379
+    },
+    {
+      "snapshot": "dev",
+      "cutoff": "2011-03-15",
+      "customers": 3856,
+      "events": 1539,
+      "non_events": 2317,
+      "event_rate": 0.3991182572614108,
+      "events_per_fold": 307
+    },
+    {
+      "snapshot": "val",
+      "cutoff": "2011-06-13",
+      "customers": 3905,
+      "events": 1503,
+      "non_events": 2402,
+      "event_rate": 0.3848911651728553,
+      "events_per_fold": 300
+    },
+    {
+      "snapshot": "test",
+      "cutoff": "2011-09-11",
+      "customers": 3238,
+      "events": 1868,
+      "non_events": 1370,
+      "event_rate": 0.576899320568252,
+      "events_per_fold": 373
+    }
+  ],
+  "window_overlap": {
+    "segment_fit_window": "dev",
+    "test_window": "test",
+    "test_customers": 3238,
+    "test_customers_in_segment_fit_window": 2443,
+    "share_of_test_customers": 0.7544780728844966
+  }
+}

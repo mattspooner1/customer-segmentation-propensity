@@ -1,0 +1,37 @@
+# Environments and secrets
+.venv/
+venv/
+.env
+
+# Data (downloaded by scripts/download_data.py, never committed)
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+
+# Serialized models: loading them runs code. Retrain with scripts/run_pipeline.py instead.
+outputs/models/
+*.pkl
+*.pickle
+*.joblib
+
+# Python and tooling
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+.ipynb_checkpoints/
+
+# OS and editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Internal publication notes (never commit)
+PROJECT_METADATA.md

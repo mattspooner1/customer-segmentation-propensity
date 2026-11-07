@@ -1,0 +1,246 @@
+{
+  "results": [
+    {
+      "id": "S1",
+      "model": "k-means A_rfm_core k=3",
+      "split": "test",
+      "metric": "segment_score_auc",
+      "value": 0.7119029290861063,
+      "ci_low": 0.6944580360024297,
+      "ci_high": 0.7269973775363406,
+      "n": 3238,
+      "n_events": 1868,
+      "baseline_name": "random segments",
+      "baseline_value": 0.5,
+      "train_value": 0.7379311824374633,
+      "verdict": "STRONG"
+    },
+    {
+      "id": "S1_ref_rule",
+      "model": "RFM quintile rule, 3 groups",
+      "split": "test",
+      "metric": "segment_score_auc",
+      "value": 0.7167224792510043,
+      "ci_low": 0.7004960589463423,
+      "ci_high": 0.7329139569632138,
+      "n": 3238,
+      "n_events": 1868,
+      "baseline_name": "random segments",
+      "baseline_value": 0.5,
+      "train_value": null,
+      "verdict": null
+    },
+    {
+      "id": "S1_ref_recency",
+      "model": "recency only",
+      "split": "test",
+      "metric": "auc",
+      "value": 0.6845548930117695,
+      "ci_low": 0.6659516078723126,
+      "ci_high": 0.7030455330426205,
+      "n": 3238,
+      "n_events": 1868,
+      "baseline_name": "random ranking",
+      "baseline_value": 0.5,
+      "train_value": null,
+      "verdict": null
+    },
+    {
+      "id": "S2",
+      "model": "segments minus RFM rule",
+      "split": "test",
+      "metric": "paired_auc_difference",
+      "value": -0.00481955016489799,
+      "ci_low": -0.014054752633794522,
+      "ci_high": 0.004310603128184331,
+      "n": 3238,
+      "n_events": null,
+      "baseline_name": "no improvement",
+      "baseline_value": 0.0,
+      "train_value": null,
+      "verdict": null
+    },
+    {
+      "id": "S4",
+      "model": "recency + segments minus recency (logistic)",
+      "split": "test",
+      "metric": "paired_auc_difference",
+      "value": 0.03322535519467329,
+      "ci_low": 0.026611690715107886,
+      "ci_high": 0.03984953817988631,
+      "n": 3238,
+      "n_events": null,
+      "baseline_name": "no improvement",
+      "baseline_value": 0.0,
+      "train_value": null,
+      "verdict": null
+    },
+    {
+      "id": "S5",
+      "model": "k-means A_rfm_core k=3",
+      "split": "test",
+      "metric": "cramers_v",
+      "value": 0.39484635338099416,
+      "ci_low": null,
+      "ci_high": null,
+      "n": 3238,
+      "n_events": 1868,
+      "baseline_name": "permuted-label null p95",
+      "baseline_value": 0.04399395633732678,
+      "train_value": null,
+      "verdict": null
+    },
+    {
+      "id": "P1",
+      "model": "hist_gradient_boosting",
+      "split": "test",
+      "metric": "auc",
+      "value": 0.7553068194251239,
+      "ci_low": 0.7384426770546195,
+      "ci_high": 0.7712024924490216,
+      "n": 3238,
+      "n_events": 1868,
+      "baseline_name": "random ranking",
+      "baseline_value": 0.5,
+      "train_value": 0.8042401462670783,
+      "verdict": "STRONG"
+    },
+    {
+      "id": "P3",
+      "model": "hist_gradient_boosting",
+      "split": "test",
+      "metric": "brier_skill_score",
+      "value": 0.18284952040702307,
+      "ci_low": 0.16320089455732484,
+      "ci_high": 0.20289812727846213,
+      "n": 3238,
+      "n_events": 1868,
+      "baseline_name": "test prevalence",
+      "baseline_value": 0.0,
+      "train_value": null,
+      "verdict": null
+    }
+  ],
+  "status": {
+    "S1_verdict": "STRONG",
+    "P1_verdict": "STRONG",
+    "S1_minimum_useful_met": true,
+    "S2_minimum_useful_met": false,
+    "S3_ari_p05": 0.8821358747660947,
+    "S3_minimum_useful_met": true,
+    "S4_minimum_useful_met": true,
+    "S5_above_null": true,
+    "P1_minimum_useful_met": true,
+    "P2_slope_ok": false,
+    "P2_bias_ok": false,
+    "P3_brier_skill_positive": true,
+    "P4_train_test_gap": 0.048933326841954394,
+    "P4_overfit": false,
+    "S1_overfit": false,
+    "mode": "Findings",
+    "recommended_segmentation": "RFM quintile rule"
+  },
+  "calibration": {
+    "slope": 1.2195612673248977,
+    "intercept": -0.29777960437035395,
+    "mean_predicted": 0.620182024056687,
+    "event_rate": 0.576899320568252,
+    "calibration_in_the_large": 0.04328270348843499
+  },
+  "within_segment_propensity_auc": {
+    "lapsed infrequent low-value": {
+      "value": 0.6250146266669357,
+      "ci_low": 0.5886446549956571,
+      "ci_high": 0.6600274738319591,
+      "n": 1044,
+      "n_events": 365
+    },
+    "cooling regular mid-value": {
+      "value": 0.6238507021433851,
+      "ci_low": 0.5960501305406042,
+      "ci_high": 0.653821441032236,
+      "n": 1495,
+      "n_events": 880
+    },
+    "recent frequent high-value": {
+      "value": 0.7503168032440652,
+      "ci_low": 0.6985889503374914,
+      "ci_high": 0.7983804158774237,
+      "n": 699,
+      "n_events": 623
+    }
+  },
+  "segment_test_rates": {
+    "lapsed infrequent low-value": 0.3496168582375479,
+    "cooling regular mid-value": 0.5886287625418061,
+    "recent frequent high-value": 0.8912732474964234
+  },
+  "segment_test_shares": {
+    "lapsed infrequent low-value": 0.3224212476837554,
+    "cooling regular mid-value": 0.46170475602223593,
+    "recent frequent high-value": 0.21587399629400864
+  },
+  "context": {
+    "segmentation": {
+      "feature_set": "A_rfm_core",
+      "k": 3,
+      "names": {
+        "0": "lapsed infrequent low-value",
+        "1": "cooling regular mid-value",
+        "2": "recent frequent high-value"
+      },
+      "dev_rates": {
+        "0": 0.19433198380566802,
+        "1": 0.380449141347424,
+        "2": 0.7848837209302325
+      }
+    },
+    "propensity": {
+      "chosen": "hist_gradient_boosting",
+      "C": 0.01,
+      "cv": [
+        {
+          "C": 0.01,
+          "cv_auc_mean": 0.7749621097328147,
+          "cv_auc_sd": 0.024004781071894025
+        },
+        {
+          "C": 0.1,
+          "cv_auc_mean": 0.7746376323045829,
+          "cv_auc_sd": 0.023408461440190157
+        },
+        {
+          "C": 1.0,
+          "cv_auc_mean": 0.7740556177022151,
+          "cv_auc_sd": 0.023435292719370008
+        },
+        {
+          "C": 10.0,
+          "cv_auc_mean": 0.7739294056812127,
+          "cv_auc_sd": 0.02348131668107203
+        }
+      ],
+      "val_auc": {
+        "logistic": {
+          "value": 0.7842779608698229,
+          "ci_low": 0.7694991844223603,
+          "ci_high": 0.7982889664888514,
+          "n": 3905,
+          "n_events": 1503
+        },
+        "hist_gradient_boosting": {
+          "value": 0.7932511330378378,
+          "ci_low": 0.7790937283643378,
+          "ci_high": 0.8081138169281432,
+          "n": 3905,
+          "n_events": 1503
+        }
+      },
+      "train_windows": [
+        "seasonal_2010",
+        "dev",
+        "val"
+      ]
+    }
+  }
+}

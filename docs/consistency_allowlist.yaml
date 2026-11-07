@@ -1,0 +1,11 @@
+# Numbers in the docs that are not results, with the reason each is allowed.
+# Used by scripts/check_consistency.py. Keep this list short.
+allow:
+  - value: "3.11"
+    reason: supported Python version
+  - value: "3.13"
+    reason: supported Python version
+  - value: "4.0"
+    reason: CC BY 4.0 licence version
+  - value: "0.02"
+    reason: ARI tie tolerance from an earlier plan version, described in METHODOLOGY changes

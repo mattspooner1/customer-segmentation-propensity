@@ -1,0 +1,4 @@
+list,customers,ordered_in_test_window,did_not_order,median_past_order_value_gbp,contact_cost_gbp,incremental_value_needed_gbp,incremental_orders_needed
+"Top by model rank, all customers",500,470,30,348.33464285714285,1000.0,2857.1428571428573,8.20229315610912
+"Top by model rank, RFM group 2 (middle)",500,316,184,299.485,1000.0,2857.1428571428573,9.54018684455935
+"Top by model rank, RFM group 1 (low)",500,217,283,252.195,1000.0,2857.1428571428573,11.329101913768541
