@@ -1,6 +1,6 @@
 # Runtime dependencies. Python >=3.11,<3.14.
 # Binary wheels for every pin checked on cp311, cp312 and cp313 (Linux x86_64 and Windows).
-numpy==2.3.2
+numpy==2.4.6
 pandas==2.3.2
 scipy==1.16.2
 scikit-learn==1.7.2
